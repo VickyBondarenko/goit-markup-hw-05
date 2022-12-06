@@ -10,6 +10,8 @@
   --first-border-color: #ececec;
   --secondary-border-color: #afb1b8;
   --work-background-color: rgba(47, 48, 58, 0.8);
+  --trans-dur: 250ms;
+  --trans-tim-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -120,13 +122,16 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-tim-function);
 }
+
 .contact-link {
   color: var(--secondary-color);
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .nav-link:hover,
 .nav-link:focus,
 .contact-link:hover,
@@ -209,8 +214,15 @@ img {
   letter-spacing: 0.06em;
   text-align: center;
   cursor: pointer;
+  transition-property: box-shadow;
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-tim-function);
 }
-
+.hero-btn:hover,
+.hero-btn:focus {
+  box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 /* ---Переваги--- */
 .feature.list {
   display: flex;
@@ -369,8 +381,8 @@ img {
 
   color: var(--secondary-border-color);
   transition-property: background-color, color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-tim-function);
 }
 /* .social-link-list > .item + .item {
   margin-left: 10px;
@@ -405,8 +417,8 @@ img {
   color: var(--secondary-border-color);
 
   transition-property: border-color, color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-tim-function);
 }
 .client-icon {
   fill: currentColor;
@@ -442,8 +454,8 @@ img {
   letter-spacing: 0.03em;
 
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-tim-function);
 }
 .addres-list.pale {
   color: var(--third-color);
@@ -471,8 +483,8 @@ img {
   background-color: var(--fourth-color);
 
   transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-tim-function);
 }
 .invite .social-link-icon {
   fill: currentColor;
@@ -500,8 +512,8 @@ img {
   background: rgba(0, 0, 0, 0.2);
 
   transition-property: opacity, visibility;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-tim-function);
   z-index: 10;
   backdrop-filter: blur(5px);
 }
@@ -522,8 +534,8 @@ img {
   border-radius: 4px;
 
   transition-property: scale;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-tim-function);
 }
 .modal-btn {
   position: absolute;
@@ -575,8 +587,8 @@ img {
   border-radius: 4px;
 
   transition-property: color, background-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-tim-function);
 }
 
 .btn-filtr:hover,
@@ -605,8 +617,8 @@ img {
   display: block;
 
   transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-tim-function);
 }
 .project-link.link:focus,
 .project-link.link:hover {
@@ -631,8 +643,8 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
   transform: translatey(100%);
   transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--trans-dur);
+  transition-timing-function: var(--trans-tim-function);
   overflow: auto;
 }
 
